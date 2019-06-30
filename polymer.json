@@ -1,0 +1,21 @@
+{
+  "shell": "src/main-application.js",
+  "entrypoint": "index.html",
+  "fragments": ["src/my-title.js"],
+  "npm": true,
+  "moduleResolution": "node",
+  "sources": ["src/main-application.js", "src/my-title.js", "package.json"],
+  "extraDependencies": ["node_modules/@webcomponents/webcomponentsjs/**"],
+  "builds": [
+    {
+      "bundle": true,
+      "js": {
+        "minify": true,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
+      "addServiceWorker": true,
+      "addPushManifest": true
+    }
+  ]
+}

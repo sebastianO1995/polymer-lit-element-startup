@@ -1,0 +1,34 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/main-application.js",
+  "fragments": [
+    "src/my-title.js"
+  ],
+  "sources": [
+    "src/main-application.js",
+    "src/my-title.js",
+    "package.json",
+    "index.html",
+    "src/main-application.js",
+    "src/my-title.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "bundle": true,
+      "js": {
+        "minify": true,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
+      "addServiceWorker": true,
+      "addPushManifest": true
+    }
+  ],
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}
